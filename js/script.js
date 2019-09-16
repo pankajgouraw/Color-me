@@ -22,7 +22,18 @@
   }
 
 
-
+  // check all image color filled or not
+  let count = 1;
+  function checkColorFill(){
+    let colored = $('.colored');
+    count = 0;
+    for(var i=0; i<colored.length; i++){
+      if($(colored[i]).css('display') == 'block'){
+        count++;
+      }
+    }
+    console.log("count colored img " +count)
+  }
 
 
   let questionHtml = '';
@@ -72,16 +83,18 @@
 
 // fill the color
 $('.transparent').click(function(){
-  fillColor(this)
+  fillColor(this);
+  checkColorFill();
+
+
 })
 
 function fillColor(fill){
    let matchColor = $(fill).attr('data-color');
-   // console.log('img color data id ' + matchColor);
-
    if( matchColor == getColor ){
       $(fill).hide();
       $(fill).next('.colored').show();
+      $(fill).parent().css({'background-image':"url(img/gif2.gif)"});
    }
 
 }
@@ -91,27 +104,44 @@ function fillColor(fill){
 $('.colored').click(function(){
   $(this).hide();
   $(this).prev('.transparent').show();
+   $(this).parent().css({'background-image':"none"});
 })
 
 
- //  $('#tryAgain').click(function(){
- //       location.reload();
- //  })
+  $('#reset').click(function(){
+       // location.reload();
+       $('.transparent').show();
+       $('.colored').hide();
+       $('.fillColor').addClass('shadow');
+      $('.imgBox').css({'background-image':"none"});
+
+       getColor = '';
+  })
 
 $('#next').click(function(){
-    index++;
-    let url2 = window.location.pathname;
-    var newurl = url2 + `?data=all&qno=${index}`;
+  if(count == 4){
+      index++;
+      let url2 = window.location.pathname;
+      var newurl = url2 + `?data=all&qno=${index}`;
       window.location.href = newurl;
+   }else{
+    completeTask()
+    console.log("Please complete task..")
+   }
+   
   });
 
 
   $('#prev').click(function(){
-    console.log("i am the prev one...");
+     if(count == 4){
     index--;
     let url2 = window.location.pathname;
     var newurl = url2 + `?data=all&qno=${index}`;
     window.location.href = newurl;
+    }else{
+      completeTask()
+      console.log('please complete task..')
+    }
   })
 
   if(index > 0){
@@ -123,6 +153,14 @@ $('#next').click(function(){
 
   if(index == data.length-1){
     $('#next').hide();
+  }
+
+
+  function completeTask(){
+    $('#completeTask').fadeIn();
+    setTimeout(function(){
+      $('#completeTask').fadeOut();
+    },1000)
   }
 
 });

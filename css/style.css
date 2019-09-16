@@ -48,6 +48,22 @@ body {
 	/*margin-bottom:15px;*/
 }
 
+#completeTask p{}
+#completeTask{
+	color: #fff;
+	font-family: cursive;
+	font-size: 20px;
+	background: radial-gradient(#00994f,black);
+	border-radius: 44px;
+	position: absolute;
+	padding: 20px 32px;
+	bottom: 15%;
+	left: 50%;
+	transform: translateX(-50%);
+	border: 3px solid #fff;
+	box-shadow: 0px 7px 9px #000;
+	display: none;
+}
 
 .imageContainer .imageWrapper{
 	    display: grid;
@@ -73,8 +89,9 @@ display: none;
     justify-content: center;
     align-items: center;
     flex-direction: column;
+    background-position: center;
 }
-.imageContainer .imgBox img{width: 150px; cursor: pointer;}
+.imageContainer .imgBox img{width: 140px; cursor: pointer;}
 .suggestionContainer{
     display: flex;
     flex-direction: column;
@@ -99,6 +116,26 @@ cursor:pointer;
 #green{background-color:green;}
 #yellow{background-color:yellow;}
 #purple{background-color:purple;}
+
+.navContainer button{
+	background: radial-gradient(#3b8438, #050505);
+	padding: 7px 15px;
+	border-radius: 7px;
+	color: #fff;
+	font-size: 15px;
+	font-weight: bold;
+	font-family: cursive;
+	letter-spacing: 1px;
+	cursor:pointer;
+	margin-right:15px;
+	border: 1px solid #ddd;
+     box-shadow: 0px 2px 4px #000;
+}
+.navContainer{
+	text-align: center;
+	margin-top: 25px;
+	margin-bottom:5px;
+}
 
 @media screen and (max-width: 500px) {
 .dropSuggestions{flex-wrap:wrap;}
