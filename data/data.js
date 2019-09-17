@@ -1,8 +1,8 @@
 
-const bgColor = 'radial-gradient(#eae9e9, #007980)';
+const bgColor = 'radial-gradient(rgb(227, 228, 228), #009688)';
 const header = 'Color Me...';
 const headerColor = '#fff';
-const alphabate = 'B';
+// const alphabate = 'B';
 const fillTheBlanksColor = "#000";
 const wellDone = 'audio/welldone.mp3'
 

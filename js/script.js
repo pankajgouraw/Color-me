@@ -9,7 +9,7 @@
   $("#fillTheBlank").css({'color':fillTheBlanksColor});
   // $('.wrapper').css({'outline':borderColor});
   $('body').css({'background':bgColor});
-  $('#LetterText').text(alphabate);
+  // $('#LetterText').text(alphabate);
 
   // url value
   let url = window.location.href;
@@ -94,6 +94,7 @@ function fillColor(fill){
    if( matchColor == getColor ){
       $(fill).hide();
       $(fill).next('.colored').show();
+      playAudio()
       $(fill).parent().css({'background-image':"url(img/gif2.gif)"});
    }
 
@@ -162,5 +163,15 @@ $('#next').click(function(){
       $('#completeTask').fadeOut();
     },1000)
   }
+
+
+  // function to play audio well done
+  function playAudio(){
+    let audio = new Audio(wellDone);
+    audio.play();
+  }
+
+
+
 
 });
