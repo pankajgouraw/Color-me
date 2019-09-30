@@ -26,7 +26,7 @@ body {
 }
 
 .innerWrapper h2{
-    font-family: cursive;
+    font-family: sans-serif;
     font-weight: bold;
     position: relative;
 	left: -70px;
@@ -35,7 +35,7 @@ body {
 #fillTheBlank{
     text-align: center;
 	font-weight: bold;
-	font-family: cursive;
+	font-family: sans-serif;
 	font-size: 30px;
 	margin-bottom: 20px;
 }
@@ -51,7 +51,7 @@ body {
 #completeTask p{}
 #completeTask{
 	color: #fff;
-	font-family: cursive;
+	font-family: sans-serif;
 	font-size: 20px;
 	background: radial-gradient(#00994f,black);
 	border-radius: 44px;
@@ -80,7 +80,7 @@ display: none;
 }
 .imageContainer .imgBox p{
 	font-size: 20px;
-	font-family: cursive;
+	font-family: sans-serif;
 	text-shadow: 0px 0px 1px #706d6d;
 	margin-bottom: 5px;
 }
@@ -124,7 +124,7 @@ cursor:pointer;
 	color: #fff;
 	font-size: 15px;
 	font-weight: bold;
-	font-family: cursive;
+	font-family: sans-serif;
 	letter-spacing: 1px;
 	cursor:pointer;
 	margin-right:15px;

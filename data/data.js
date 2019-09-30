@@ -22,10 +22,10 @@ const data = [
 	},
 
 	{
-		image1 : ['img/butterfly_transparent.png','img/butterfly.png','purple'],
+		image1 : ['img/flower_transparent.png','img/flower.png','yellow'],
 		image2 : ['img/tomato_transparent.png','img/tomato.png','red'],
 		image3 : ['img/tree_transparent.png','img/tree.png','green'],
-		image4 : ['img/flower_transparent.png','img/flower.png','yellow']
+		image4 : ['img/butterfly_transparent.png','img/butterfly.png','purple']
 	}
 	
 ];
