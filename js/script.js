@@ -96,6 +96,9 @@ function fillColor(fill){
       $(fill).next('.colored').show();
       playAudio()
       $(fill).parent().css({'background-image':"url(img/gif2.gif)"});
+      setTimeout(function(){
+         $(fill).parent().css({'background':"none"});
+      },2000);
    }
 
 }
